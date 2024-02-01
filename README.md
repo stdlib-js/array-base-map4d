@@ -41,20 +41,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-base-map4d
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import map4d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-map4d@esm/index.mjs';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-map4d@esm/index.mjs';
+var map4d = require( '@stdlib/array-base-map4d' );
 ```
 
 #### map4d( x, shape, fcn\[, thisArg] )
@@ -62,8 +74,8 @@ import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-map4d@e
 Applies a function to elements in a four-dimensional nested input array and assigns results to elements in a new four-dimensional nested output array.
 
 ```javascript
-import naryFunction from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nary-function@esm/index.mjs';
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
+var naryFunction = require( '@stdlib/utils-nary-function' );
+var abs = require( '@stdlib/math-base-special-abs' );
 
 var x = [ [ [ [ -1.0, -2.0 ], [ -3.0, -4.0 ] ] ] ];
 var shape = [ 1, 1, 2, 2 ];
@@ -108,9 +120,9 @@ var v = ctx.count;
 Applies a function to elements in a four-dimensional nested input array and assigns results to elements in a four-dimensional nested output array.
 
 ```javascript
-import naryFunction from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nary-function@esm/index.mjs';
-import zeros4d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zeros4d@esm/index.mjs';
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
+var naryFunction = require( '@stdlib/utils-nary-function' );
+var zeros4d = require( '@stdlib/array-base-zeros4d' );
+var abs = require( '@stdlib/math-base-special-abs' );
 
 var x = [ [ [ [ -1.0, -2.0 ], [ -3.0, -4.0 ] ] ] ];
 var shape = [ 1, 1, 2, 2 ];
@@ -150,17 +162,12 @@ The function assumes that the input and output arrays have the same shape.
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
-import filled4dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-filled4d-by@esm/index.mjs';
-import naryFunction from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nary-function@esm/index.mjs';
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
-import map4d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-map4d@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
+var filled4dBy = require( '@stdlib/array-base-filled4d-by' );
+var naryFunction = require( '@stdlib/utils-nary-function' );
+var abs = require( '@stdlib/math-base-special-abs' );
+var map4d = require( '@stdlib/array-base-map4d' );
 
 var shape = [ 1, 3, 3, 3 ];
 
@@ -169,10 +176,6 @@ console.log( x );
 
 var y = map4d( x, shape, naryFunction( abs, 1 ) );
 console.log( y );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -196,7 +199,7 @@ console.log( y );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -250,8 +253,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
 [deno-url]: https://github.com/stdlib-js/array-base-map4d/tree/deno
+[deno-readme]: https://github.com/stdlib-js/array-base-map4d/blob/deno/README.md
 [umd-url]: https://github.com/stdlib-js/array-base-map4d/tree/umd
+[umd-readme]: https://github.com/stdlib-js/array-base-map4d/blob/umd/README.md
 [esm-url]: https://github.com/stdlib-js/array-base-map4d/tree/esm
+[esm-readme]: https://github.com/stdlib-js/array-base-map4d/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/array-base-map4d/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/array-base-map4d/main/LICENSE
